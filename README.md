@@ -143,31 +143,34 @@ Place this in your printer.cfg
 [auto_speed]
 ```
 The values listed below are the defaults Auto Speed uses. You can include them if you wish to change their values or run into issues.
-```
+
+```ini
 [auto_speed]
-#axis: diag_x, diag_y  ; One or multiple of `x`, `y`, `diag_x`, `diag_y`, `z`
+axis: diag_x, diag_y  ; One or multiple of `x`, `y`, `diag_x`, `diag_y`, `z`
 
-#margin: 20            ; How far away from your axes to perform movements
+margin: 20            ; How far away from your axes to perform movements
 
-#settling_home: 1      ; Perform settling home before starting Auto Speed
-#max_missed: 1.0       ; Maximum full steps that can be missed
-#endstop_samples: 3    ; How many endstop samples to take for endstop variance
+settling_home: 1      ; Perform settling home before starting Auto Speed
+max_missed: 1.0       ; Maximum full steps that can be missed
+endstop_samples: 3    ; How many endstop samples to take for endstop variance
 
-#accel_min: 1000.0     ; Minimum acceleration test may try
-#accel_max: 50000.0    ; Maximum acceleration test may try
-#accel_accu: 0.05      ; Keep binary searching until the result is within this percentage
+accel_min: 1000.0     ; Minimum acceleration test may try
+accel_max: 50000.0    ; Maximum acceleration test may try
+accel_accu: 0.05      ; Keep binary searching until the result is within this percentage
 
-#velocity_min: 50.0    ; Minimum velocity test may try
-#velocity_max: 5000.0  ; Maximum velocity test may try
-#velocity_accu: 0.05   ; Keep binary searching until the result is within this percentage
+velocity_min: 50.0    ; Minimum velocity test may try
+velocity_max: 5000.0  ; Maximum velocity test may try
+velocity_accu: 0.05   ; Keep binary searching until the result is within this percentage
 
-#derate: 0.8           ; Derate discovered results by this amount
+derate: 0.8           ; Derate discovered results by this amount
 
-#validate_margin: Unset      ; Margin for VALIDATE, Defaults to margin
-#validate_inner_margin: 20.0 ; Margin for VALIDATE inner pattern
-#validate_iterations: 50     ; Perform VALIDATE pattern this many times
+validate_margin: Unset      ; Margin for VALIDATE, Defaults to margin
+validate_inner_margin: 20.0 ; Margin for VALIDATE inner pattern
+validate_iterations: 50     ; Perform VALIDATE pattern this many times
 
-#results_dir: ~/printer_data/config ; Destination directory for graphs
+show_macros_in_webui: True ; Display macros in web UI (e.g. Mainsail, Fluidd)
+
+results_dir: ~/printer_data/config ; Destination directory for graphs
 ```
 
 ### Macro
